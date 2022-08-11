@@ -12,13 +12,13 @@ pipeline {
     stages {
           stage('Install Terraform') {
               steps {
-                    sh "yum install wget zip -y"
-                    sh "cd /tmp"
-                    sh "curl -o bin_terraform.zip https://releases.hashicorp.com/terraform/'$terraform_version'/terraform_'$terraform_version'_linux_amd64.zip"
-                    sh "ls -l; pwd;sudo unzip -o bin_terraform.zip"
-                    sh "mv terraform /usr/bin"
-                    sh "rm -rf bin_terraform.zip"
-                    sh "terraform version"
+                    sh "sudo yum install wget zip -y"
+                    sh "sudo cd /tmp"
+                    sh "sudo curl -o bin_terraform.zip https://releases.hashicorp.com/terraform/'$terraform_version'/terraform_'$terraform_version'_linux_amd64.zip"
+                    sh "sudo ls -l; pwd;sudo unzip -o bin_terraform.zip"
+                    sh "sudo mv terraform /usr/bin"
+                    sh "sudo rm -rf bin_terraform.zip"
+                    sh "sudo terraform version"
               }
           }
           stage('Install Packer') {
