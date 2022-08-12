@@ -46,7 +46,7 @@ pipeline {
                     }
                 }
           }
-          stage('Deploy??') {
+          /*stage('Deploy??') {
                 steps {
                     script {
                        timeout(time: 2, unit: 'MINUTES') {
@@ -54,7 +54,7 @@ pipeline {
                        }
                     }
                 }
-          }
+          }*/
          stage('Terraform Deploy'){
              steps {
                  dir('./terraform'){
