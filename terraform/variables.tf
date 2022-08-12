@@ -37,11 +37,9 @@ variable "ssh_key" {
 variable "sg_source" {
     default = ["0.0.0.0/0"]
     description = "source cidr for sg"
-    type = "list"
 }
 
 variable "port_number" {
   description = "Remote tcp port to be used for access to the vms created via the nsg applied to the nics."
   default = ["22","3000","9090","9093","8080","80"]
-  type = "list"
 }
