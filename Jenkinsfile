@@ -5,7 +5,7 @@ pipeline {
     }
     environment {
         terraform_version = '1.2.7'
-        packer_version = '1.4.3'
+        packer_version = '1.8.2'
         access_key = 'AKIAWYV5RVX6Y47W5OMN'
         secret_key = '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'
     }
