@@ -6,8 +6,8 @@ pipeline {
     environment {
         terraform_version = '1.2.7'
         packer_version = '1.8.2'
-        access_key = 'AKIAWYV5RVX6Y47W5OMN'
-        secret_key = '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'
+        access_key = ''
+        secret_key = ''
     }
     stages {
           stage('Install Terraform') {
@@ -60,7 +60,7 @@ pipeline {
                  dir('./terraform'){
 
                  sh  """
-                     terraform init; terraform plan; terraform apply -auto-approve -var 'access_key=$access_key' -var 'secret_key=$secret_key'
+                     terraform init; terraform plan; terraform apply -auto-approve
                      """
 
                  }
