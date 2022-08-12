@@ -36,7 +36,7 @@ pipeline {
           }
           stage('code checkout') {
                steps {
-                    git branch: 'master', url: 'https://github.com/aleti-pavan/packer-ansible-terraform-demo.git'
+                    git branch: 'master', url: 'https://github.com/ashrujitpal/packer-ansible-terraform-demo.git'
                     }
           }
           stage('Build AMI') {
